@@ -1,0 +1,252 @@
+:root {
+  --red: #fbd38d;
+  --blue: #87ceeb;
+}
+
+.overflow {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 12px;
+}
+
+button {
+  position: relative;
+  width: 190px;
+  height: 50px;
+  border: 0px solid;
+  outline: 0px solid;
+  cursor: pointer;
+  background: var(--blue);
+  border-radius: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.santa {
+  width: 45px;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  transition: 250ms;
+}
+
+.christmas-tree {
+  width: 30px;
+  position: absolute;
+  transform: translateY(30px);
+  transition: 300ms;
+  transition-delay: 500ms;
+}
+
+.christmas-tree-1 {
+  left: 0px;
+  top: 20px;
+}
+
+.christmas-tree-2 {
+  right: 0px;
+  top: 20px;
+}
+
+.cloud-container {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-40px);
+  transition: 250ms;
+  transition-delay: 250ms;
+}
+
+.cloud {
+  fill: #fff;
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  left: 30px;
+  top: 3px;
+  animation-name: cloud;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.cloud:nth-child(2) {
+  right: 30px;
+  top: 14px;
+  animation-name: cloud;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+.snowflake {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.snowflake:nth-child(1) {
+  transition: 0.8s;
+  filter: drop-shadow(0 0 10px #fffdef);
+  width: 30px;
+  height: 30px;
+  inset: 0;
+}
+
+.snowflake:nth-child(2) {
+  transition: 0.8s;
+  filter: drop-shadow(0 0 10px #fffdef);
+  width: 20px;
+  height: 20px;
+  inset: 0;
+}
+
+.snowflake:nth-child(3) {
+  transition: 0.8s;
+  filter: drop-shadow(0 0 10px #fffdef);
+  width: 40px;
+  height: 40px;
+  inset: 0;
+}
+
+.snowflake:nth-child(4) {
+  transition: 0.8s;
+  filter: drop-shadow(0 0 10px #fffdef);
+  width: 10px;
+  height: 10px;
+  inset: 0;
+}
+
+.snowflake:nth-child(5) {
+  transition: 0.8s;
+  filter: drop-shadow(0 0 10px #fffdef);
+  width: 8px;
+  height: 8px;
+  inset: 0;
+}
+
+.sun {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  animation-name: sun;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes sun {
+  from {
+    transform: rotate(0.5turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.text-container {
+  color: black;
+  background: var(--red);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 11;
+  transition: 250ms;
+  font-size: 20px;
+}
+
+/* hover state css */
+button:hover {
+  box-shadow: 0 0 25px var(--blue);
+}
+
+button:hover .christmas-tree {
+  transform: translateY(0px);
+}
+
+button:hover .cloud-container {
+  transform: translateY(0px);
+}
+
+button:hover .snowflake:nth-child(1) {
+  top: 95%;
+  left: 25%;
+  animation-name: sun;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 1;
+}
+
+button:hover .snowflake:nth-child(2) {
+  top: -35%;
+  left: 10%;
+  animation-name: sun;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 1;
+}
+
+button:hover .snowflake:nth-child(3) {
+  opacity: 1;
+  top: -80%;
+  left: -30%;
+  animation-name: sun;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+button:hover .snowflake:nth-child(4) {
+  opacity: 1;
+  top: 120%;
+  left: 80%;
+  animation-name: sun;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+button:hover .snowflake:nth-child(5) {
+  opacity: 1;
+  top: 25%;
+  left: 115%;
+  animation-name: sun;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+button:hover .santa {
+  transform: translate(-30px, -40px);
+}
+
+button:hover .text-container {
+  transform: translateY(-100%);
+}
+
+/* hover state css */

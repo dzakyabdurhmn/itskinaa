@@ -1,31 +1,36 @@
 {
-  "name": "kinefy",
-  "version": "0.1.0",
-  "private": true,
+  "name": "craftzdog-homepage",
+  "version": "1.0.0",
+  "description": "Takuya's website",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
+    "prettier": "prettier --write .",
     "lint": "next lint"
   },
+  "keywords": [],
+  "author": "Ajeng shyakina",
+  "license": "MIT",
   "dependencies": {
-    "@react-three/drei": "^9.96.5",
-    "@react-three/fiber": "^8.15.15",
-    "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "three": "^0.158.0"
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@vercel/analytics": "^1.1.1",
+    "framer-motion": "^10.16.4",
+    "next": "^13.5.6",
+    "next-remove-imports": "^1.0.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-social-media-embed": "^2.5.9",
+    "three": "^0.157.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/three": "^0.158.3",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.4.1"
   }
 }
