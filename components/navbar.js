@@ -25,11 +25,10 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   return (
     <Link
       as={NextLink}
-      className="rounded-xl px-6 "
       href={href}
       scroll={false}
       p={2}
-      bg={active ? '#FABF96' : undefined}
+      bg={active ? 'grassTeal' : undefined}
       color={active ? '#202023' : inactiveColor}
       target={target}
       {...props}
@@ -48,7 +47,6 @@ const Navbar = props => {
 
   return (
     <Box
-      className="justify-between"
       position="fixed"
       as="nav"
       w="100%"
@@ -79,51 +77,33 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
-          <LinkItem href="/wallpapers" path={path}>
-            Wallpapers
-          </LinkItem>
           <LinkItem href="/posts" path={path}>
-            Posts
+            posts
           </LinkItem>
         </Stack>
 
-        <div className="flex">
+        <Box flex={1} align="right">
           <ThemeToggleButton />
 
-          <div>
-            <Box
-              className=""
-              ml={2}
-              display={{ base: 'inline-block', md: 'none' }}
-            >
-              <Menu isLazy id="navbar-menu">
-                <MenuButton
-                  as={IconButton}
-                  icon={<HamburgerIcon />}
-                  variant="outline"
-                  aria-label="Options"
-                />
-                <MenuList>
-                  <MenuItem as={MenuLink} href="/">
-                    About
-                  </MenuItem>
-                  <MenuItem as={MenuLink} href="/works">
-                    Works
-                  </MenuItem>
-                  <MenuItem as={MenuLink} href="/wallpapers">
-                    Wallpapers
-                  </MenuItem>
-                  <MenuItem as={MenuLink} href="/posts">
-                    Posts
-                  </MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
-          </div>
-        </div>
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu isLazy id="navbar-menu">
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+              />
+              <MenuList>
+                <MenuItem as={MenuLink} href="/">
+                  me
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/posts">
+                  posts
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box>
       </Container>
     </Box>
   )

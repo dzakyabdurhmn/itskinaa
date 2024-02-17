@@ -12,9 +12,9 @@
   border-radius: 12px;
 }
 
-button {
+.flw-btn {
   position: relative;
-  width: 190px;
+  width:;
   height: 50px;
   border: 0px solid;
   outline: 0px solid;
@@ -179,19 +179,19 @@ button {
 }
 
 /* hover state css */
-button:hover {
+.flw-btn:hover {
   box-shadow: 0 0 25px var(--blue);
 }
 
-button:hover .christmas-tree {
+.flw-btn:hover .christmas-tree {
   transform: translateY(0px);
 }
 
-button:hover .cloud-container {
+.flw-btn:hover .cloud-container {
   transform: translateY(0px);
 }
 
-button:hover .snowflake:nth-child(1) {
+.flw-btn:hover .snowflake:nth-child(1) {
   top: 95%;
   left: 25%;
   animation-name: sun;
@@ -201,7 +201,7 @@ button:hover .snowflake:nth-child(1) {
   opacity: 1;
 }
 
-button:hover .snowflake:nth-child(2) {
+.flw-btn:hover .snowflake:nth-child(2) {
   top: -35%;
   left: 10%;
   animation-name: sun;
@@ -211,7 +211,7 @@ button:hover .snowflake:nth-child(2) {
   opacity: 1;
 }
 
-button:hover .snowflake:nth-child(3) {
+.flw-btn:hover .snowflake:nth-child(3) {
   opacity: 1;
   top: -80%;
   left: -30%;
@@ -221,7 +221,7 @@ button:hover .snowflake:nth-child(3) {
   animation-timing-function: linear;
 }
 
-button:hover .snowflake:nth-child(4) {
+.flw-btn:hover .snowflake:nth-child(4) {
   opacity: 1;
   top: 120%;
   left: 80%;
@@ -231,7 +231,7 @@ button:hover .snowflake:nth-child(4) {
   animation-timing-function: linear;
 }
 
-button:hover .snowflake:nth-child(5) {
+.flw-btn:hover .snowflake:nth-child(5) {
   opacity: 1;
   top: 25%;
   left: 115%;
@@ -241,11 +241,11 @@ button:hover .snowflake:nth-child(5) {
   animation-timing-function: linear;
 }
 
-button:hover .santa {
+.flw-btn:hover .santa {
   transform: translate(-30px, -40px);
 }
 
-button:hover .text-container {
+.flw-btn:hover .text-container {
   transform: translateY(-100%);
 }
 

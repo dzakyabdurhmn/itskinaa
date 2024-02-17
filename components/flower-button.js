@@ -93,8 +93,8 @@ import React from 'react'
 
 const Btb = ({ children }) => {
   return (
-    <>
-      <button className="w-full h-14">
+    <div className="justify-center flex w-full">
+      <button className="w-full  h-14 flw-btn">
         <div className="overflow">
           <div className="text-container">{children}</div>
           <svg
@@ -709,7 +709,7 @@ const Btb = ({ children }) => {
           />
         </svg> */}
       </button>
-    </>
+    </div>
   )
 }
 

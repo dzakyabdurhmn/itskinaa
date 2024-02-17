@@ -1,11 +1,9 @@
 import { Container, Heading, Box, useColorModeValue } from '@chakra-ui/react'
-import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import ButtonBlue from '../components/blue-button'
 import ButtonCream from '../components/flower-button'
-import { TikTokEmbed } from 'react-social-media-embed'
 import Kina from '../components/tiktok'
+import { description, me } from '../lib/info'
 const Home = () => (
   <Layout>
     <Container>
@@ -17,32 +15,61 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello everyone, i'ts kina 👋
+        {me}
       </Box>
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           i'ts me
         </Heading>
-        <p>
-          Dengan kecakapan luar biasa dalam public speaking dan dedikasi yang
-          tak terbantahkan terhadap pengembangan diri, saya adalah seorang siswa
-          SMA yang telah berhasil memimpin sebagai Ketua OSIS selama dua
-          periode. Komitmen saya terhadap kepemimpinan yang berintegritas dan
-          kemampuan berbicara empati memperkuat hasrat saya untuk berkontribusi
-          pada diplomasi global. Dengan cita-cita menjadi seorang diplomat, saya
-          terus mengejar pengetahuan yang mendalam dalam hubungan internasional
-          dan senantiasa berusaha untuk memperluas wawasan serta keterampilan
-          diplomasi saya. Melalui pengalaman dan prestasi saya, saya berharap
-          dapat menjadi agen perubahan positif dalam mewujudkan perdamaian dan
-          kerjasama antarbangsa.
-        </p>
+        <p>{description}</p>
 
-        <div className="flex flex-col w-full justify-center gap-y-5 py-7 px-1">
-          <Card name={'hakkiii'} key={1} slug={'ga ada'} />
-          <Card name={'hakkiii'} key={1} slug={'ga ada'} />
+        <div className="mt-7">
+          <Heading className="ml-2" as="h3" variant="section-title">
+            top posts
+          </Heading>
+          <div className="flex justify-center items-center flex-col space-y-5  w-full">
+            {/* <div className="flex  space-x-3">
+              <Card
+                name={'Harmoni Bhinneka 🇮🇩'}
+                key={1}
+                slug={'harmoni-bhinneka'}
+              />
+              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
+            </div>
+            <div className="flex md:flex md:flex-col space-x-3">
+              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
+              <Card name={'hakkiii'} key={1} slug={'ga ada'} />
+            </div> */}
+          </div>
         </div>
 
-        <Kina />
+        <div className="flex items-center justify-center mt-20 mx-auto max-w-[1000px]">
+          <div className="flex flex-col  space-y-8">
+            <div className="flex-row xl:gap-4 xl:flex gap-y-5">
+              <Card
+                name={'Harmoni Bhinneka 🇮🇩'}
+                key={1}
+                slug={'harmoni-bhinneka'}
+              />
+              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
+            </div>
+            <div className="flex-row xl:flex gap-5">
+              <Card
+                name={'Harmoni Bhinneka 🇮🇩'}
+                key={1}
+                slug={'harmoni-bhinneka'}
+              />
+              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
+            </div>
+          </div>
+        </div>
+        {/*  */}
+        <div className="mt-7">
+          <Heading className="ml-2" as="h3" variant="section-title">
+            tiktok profie
+          </Heading>
+          <Kina />
+        </div>
       </Section>
       {/* fotter */}
       <a href="https://wa.me/62896186830?text=Halo%20,%0A%0ASemoga%20pesan%20ini%20menemukan%20Anda%20dalam%20keadaan%20sehat%20dan%20bahagia.%0A%0ASaya%20%5BNama%20Anda%5D%20dari%20%5BNama%20Brand/Perusahaan%20Anda%5D.%20Kami%20%5Bdeskripsi%20singkat%20tentang%20brand/perusahaan%20Anda%5D.%0A%0AKami%20terkesan%20dengan%20konten%20dan%20engagement%20Anda%20di%20%5Bplatform%20media%20sosial">
@@ -68,7 +95,31 @@ function ArrowIcon() {
     </svg>
   )
 }
+
 function Card({ slug, name }) {
+  return (
+    <div className="group">
+      <a
+        href={`/post/${slug}`}
+        className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3  py-4 w-full"
+      >
+        <div className="flex flex-col">
+          <p className="font-medium text-neutral-900 dark:text-neutral-100">
+            {name}
+          </p>
+          {/* <Suspense fallback={<p className="h-6" />}>
+            <Views slug={slug} />
+          </Suspense> */}
+        </div>
+        <div className="text-neutral-700 dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12">
+          <ArrowIcon />
+        </div>
+      </a>
+    </div>
+  )
+}
+
+function CardBox({ slug, name }) {
   return (
     <div className="group">
       <a
