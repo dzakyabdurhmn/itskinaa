@@ -27,43 +27,12 @@ const Home = () => (
           <Heading className="ml-2" as="h3" variant="section-title">
             top posts
           </Heading>
-          <div className="flex justify-center items-center flex-col space-y-5  w-full">
-            {/* <div className="flex  space-x-3">
-              <Card
-                name={'Harmoni Bhinneka 🇮🇩'}
-                key={1}
-                slug={'harmoni-bhinneka'}
-              />
-              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
-            </div>
-            <div className="flex md:flex md:flex-col space-x-3">
-              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
-              <Card name={'hakkiii'} key={1} slug={'ga ada'} />
-            </div> */}
+          <div className="flex">
+            <CardBox name={'Keharmonian indonesia'} key={1} slug={'ga ada'} />
+            <Card name={'hakkiii'} key={1} slug={'ga ada'} />
           </div>
         </div>
 
-        <div className="flex items-center justify-center mt-20 mx-auto max-w-[1000px]">
-          <div className="flex flex-col  space-y-8">
-            <div className="flex-row xl:gap-4 xl:flex gap-y-5">
-              <Card
-                name={'Harmoni Bhinneka 🇮🇩'}
-                key={1}
-                slug={'harmoni-bhinneka'}
-              />
-              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
-            </div>
-            <div className="flex-row xl:flex gap-5">
-              <Card
-                name={'Harmoni Bhinneka 🇮🇩'}
-                key={1}
-                slug={'harmoni-bhinneka'}
-              />
-              <CardBox name={'hakkiii'} key={1} slug={'ga ada'} />
-            </div>
-          </div>
-        </div>
-        {/*  */}
         <div className="mt-7">
           <Heading className="ml-2" as="h3" variant="section-title">
             tiktok profie
@@ -72,7 +41,7 @@ const Home = () => (
         </div>
       </Section>
       {/* fotter */}
-      <a href="https://wa.me/62896186830?text=Halo%20,%0A%0ASemoga%20pesan%20ini%20menemukan%20Anda%20dalam%20keadaan%20sehat%20dan%20bahagia.%0A%0ASaya%20%5BNama%20Anda%5D%20dari%20%5BNama%20Brand/Perusahaan%20Anda%5D.%20Kami%20%5Bdeskripsi%20singkat%20tentang%20brand/perusahaan%20Anda%5D.%0A%0AKami%20terkesan%20dengan%20konten%20dan%20engagement%20Anda%20di%20%5Bplatform%20media%20sosial">
+      <a href="https://wa.me/6289618683070?text=Halo%20,%0A%0ASemoga%20pesan%20ini%20menemukan%20Anda%20dalam%20keadaan%20sehat%20dan%20bahagia.%0A%0ASaya%20%5BNama%20Anda%5D%20dari%20%5BNama%20Brand/Perusahaan%20Anda%5D.%20Kami%20%5Bdeskripsi%20singkat%20tentang%20brand/perusahaan%20Anda%5D.%0A%0AKami%20terkesan%20dengan%20konten%20dan%20engagement%20Anda%20di%20%5Bplatform%20media%20sosial">
         <ButtonCream>business inquiries.</ButtonCream>
       </a>
     </Container>
