@@ -14,9 +14,13 @@ const VoxelDog = () => {
   const refRenderer = useRef()
   const urlDogGLB =
     (process.env.NODE_ENV === 'production'
-      ? 'https://craftzdog.global.ssl.fastly.net/homepage'
+      ? 'https://itskinaa.vercel.app'
       : '') + '/dog.glb'
 
+  // const urlDogGLB =
+  //   (process.env.NODE_ENV === 'production'
+  //     ? 'https://craftzdog.global.ssl.fastly.net/homepage'
+  //     : '') + '/dog.glb'
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
     const { current: container } = refContainer
@@ -46,7 +50,7 @@ const VoxelDog = () => {
       refRenderer.current = renderer
       const scene = new THREE.Scene()
 
-      const target = new THREE.Vector3(-0.5, 1.2, 0)
+      const target = new THREE.Vector3(-6, 1, 3)
       const initialCameraPosition = new THREE.Vector3(
         20 * Math.sin(0.2 * Math.PI),
         10,
@@ -55,7 +59,7 @@ const VoxelDog = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.005 + 3.2
+      const scale = scH * 0.005 + 2.7
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,

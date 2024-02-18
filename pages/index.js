@@ -1,9 +1,13 @@
 import { Container, Heading, Box, useColorModeValue } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import ButtonCream from '../components/flower-button'
-import Kina from '../components/tiktok'
+import Button from '../components/flower-button'
+import dynamic from 'next/dynamic'
+
 import { description, me } from '../lib/info'
+
+const Kina = dynamic(() => import('../components/tiktok'), { ssr: false })
+
 const Home = () => (
   <Layout>
     <Container>
@@ -27,8 +31,7 @@ const Home = () => (
           <Heading className="ml-2" as="h3" variant="section-title">
             top posts
           </Heading>
-          <div className="flex">
-            <CardBox name={'Keharmonian indonesia'} key={1} slug={'ga ada'} />
+          <div className="mt-6 p-2">
             <Card name={'hakkiii'} key={1} slug={'ga ada'} />
           </div>
         </div>
@@ -42,7 +45,7 @@ const Home = () => (
       </Section>
       {/* fotter */}
       <a href="https://wa.me/6289618683070?text=Halo%20,%0A%0ASemoga%20pesan%20ini%20menemukan%20Anda%20dalam%20keadaan%20sehat%20dan%20bahagia.%0A%0ASaya%20%5BNama%20Anda%5D%20dari%20%5BNama%20Brand/Perusahaan%20Anda%5D.%20Kami%20%5Bdeskripsi%20singkat%20tentang%20brand/perusahaan%20Anda%5D.%0A%0AKami%20terkesan%20dengan%20konten%20dan%20engagement%20Anda%20di%20%5Bplatform%20media%20sosial">
-        <ButtonCream>business inquiries.</ButtonCream>
+        <Button w="w-full">business inquiries.</Button>
       </a>
     </Container>
   </Layout>
@@ -70,30 +73,7 @@ function Card({ slug, name }) {
     <div className="group">
       <a
         href={`/post/${slug}`}
-        className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3  py-4 w-full"
-      >
-        <div className="flex flex-col">
-          <p className="font-medium text-neutral-900 dark:text-neutral-100">
-            {name}
-          </p>
-          {/* <Suspense fallback={<p className="h-6" />}>
-            <Views slug={slug} />
-          </Suspense> */}
-        </div>
-        <div className="text-neutral-700 dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12">
-          <ArrowIcon />
-        </div>
-      </a>
-    </div>
-  )
-}
-
-function CardBox({ slug, name }) {
-  return (
-    <div className="group">
-      <a
-        href={`/blog/${slug}`}
-        className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4 w-full"
+        className="w-full border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3  py-4"
       >
         <div className="flex flex-col">
           <p className="font-medium text-neutral-900 dark:text-neutral-100">

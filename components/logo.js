@@ -32,7 +32,7 @@ const Logo = () => {
           fontWeight="bold"
           ml={3}
         >
-          Ajeng shyakina
+          ajeng shyakina
         </Text>
       </LogoBox>
     </Link>
