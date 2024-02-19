@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { Post } from '../components/grid-item'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
 const Works = () => (
@@ -13,10 +13,15 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-            A Markdown note-taking app with 100+ plugins, cross-platform and
-            encrypted data sync support
-          </WorkGridItem>
+          <Post
+            group="Sosial Budaya"
+            id="harmoni-bhinneka"
+            title="Dekonstruksi Harmoni"
+            thumbnail={thumbInkdrop}
+          >
+            Menafsir ulang Bhinneka Tunggal Ika dalam Pluralitas Sosial,
+            Ekonomi, dan Gender Era Kontemporer
+          </Post>
         </Section>
       </SimpleGrid>
     </Container>

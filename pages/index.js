@@ -3,15 +3,19 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Button from '../components/flower-button'
 import dynamic from 'next/dynamic'
-
+import localFont from 'next/font/local'
 import { description, me } from '../lib/info'
 
 const Kina = dynamic(() => import('../components/tiktok'), { ssr: false })
+
+const Winkle = localFont({ src: '../public/winkle-Regular.ttf' })
+const MickyMouse = localFont({ src: '../public/mickey-mouse.otf' })
 
 const Home = () => (
   <Layout>
     <Container>
       <Box
+        className={`text-xl   ${Winkle.className}`}
         borderRadius="lg"
         mb={6}
         p={3}
@@ -25,16 +29,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           i'ts me
         </Heading>
-        <p>{description}</p>
-
-        <div className="mt-7">
-          <Heading className="ml-2" as="h3" variant="section-title">
-            top posts
-          </Heading>
-          <div className="mt-6 p-2">
-            <Card name={'hakkiii'} key={1} slug={'ga ada'} />
-          </div>
-        </div>
+        <p className={Winkle.className}>{description}</p>
 
         <div className="mt-7">
           <Heading className="ml-2" as="h3" variant="section-title">

@@ -4,7 +4,7 @@ const guestbook = () => {
   return (
     <div>
       <div className="mt-24">
-        <Button w="w-full">Login to send message</Button>
+        <Button w="w-full">sabar bang masi di kembangin</Button>
       </div>{' '}
     </div>
   )
