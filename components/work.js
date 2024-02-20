@@ -5,7 +5,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 export const Title = ({ children }) => (
   <div className="flex mb-10">
     <Link className="text-violet-400  " href="/works">
-      Works
+      post
     </Link>
     <span>
       <ChevronRightIcon />{' '}
@@ -21,7 +21,13 @@ export const WorkImage = ({ src, alt }) => (
 )
 
 export const Meta = ({ children }) => (
-  <Badge colorScheme="green" mr={2}>
-    {children}
-  </Badge>
+  <div className="py-3 ">
+    <p
+      className="bg-[#34403A] text-[#9AE6B4] py-1 px-2 rounded-sm font-semibold text-sm "
+      colorScheme="green"
+      mr={2}
+    >
+      {children}
+    </p>
+  </div>
 )

@@ -1,26 +1,26 @@
 .bodypost {
   position: relative;
   padding: 15px 45px;
-  background: #fec195;
+  /* background: #fec195; */
   font-size: 17px;
   font-weight: 500;
-  color: #181818;
+  color: #fff;
   cursor: pointer;
-  border: 1px solid #fec195;
+  /* border: 1px solid #fec195; */
   border-radius: 8px;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
 }
 
 .bodypost:hover {
-  border: 1px solid #f3b182;
-  background: linear-gradient(
+  /* border: 1px solid #f3b182; */
+  /* background: linear-gradient(
     85deg,
     #fec195,
     #fcc196,
     #fabd92,
     #fac097,
     #fac39c
-  );
+  ); */
   animation: wind 2s ease-in-out infinite;
 }
 

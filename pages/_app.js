@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import '../styles/globals.css'
 import '../components/flower-button.css'
 import '../components/card-style.css'
+import '../components/border.css'
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'

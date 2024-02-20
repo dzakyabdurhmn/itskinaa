@@ -5,7 +5,8 @@ import Button from '../components/flower-button'
 import dynamic from 'next/dynamic'
 import localFont from 'next/font/local'
 import { description, me } from '../lib/info'
-
+import Flower from '../components/icons/flower'
+import Border from '../components/border'
 const Kina = dynamic(() => import('../components/tiktok'), { ssr: false })
 
 const Winkle = localFont({ src: '../public/winkle-Regular.ttf' })
@@ -25,11 +26,16 @@ const Home = () => (
       >
         {me}
       </Box>
+
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           i'ts me
         </Heading>
-        <p className={Winkle.className}>{description}</p>
+        <div className="border-0 border-black">
+          <Border className={`border-1 border-white  ${Winkle.className}`}>
+            {description}
+          </Border>
+        </div>
 
         <div className="mt-7">
           <Heading className="ml-2" as="h3" variant="section-title">
