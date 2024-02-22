@@ -4,9 +4,10 @@ import Section from '../components/section'
 import Button from '../components/flower-button'
 import dynamic from 'next/dynamic'
 import localFont from 'next/font/local'
-import { description, me } from '../lib/info'
+import { description0, description1, me } from '../lib/info'
 import Flower from '../components/icons/flower'
 import Border from '../components/border'
+import { TextGenerateEffect } from '../components/text-reveal-card'
 const Kina = dynamic(() => import('../components/tiktok'), { ssr: false })
 
 const Winkle = localFont({ src: '../public/winkle-Regular.ttf' })
@@ -32,9 +33,11 @@ const Home = () => (
           i'ts me
         </Heading>
         <div className="border-0 border-black">
-          <Border className={`border-1 border-white  ${Winkle.className}`}>
-            {description}
-          </Border>
+          <div className={`border-1 border-white  ${Winkle.className}`}>
+            <p> {description0}</p>
+            <br />
+            <p>{description1}</p>
+          </div>
         </div>
 
         <div className="mt-7">
