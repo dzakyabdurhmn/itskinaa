@@ -29,7 +29,10 @@ export const Post = ({
   thumbnail,
   group
 }) => (
-  <Box className="  font-extrabold rounded-xl px-2 py-2 " w="100%">
+  <Box
+    className="rounded-xl px-2 mb-2 py-2 border-[2.2px] hover:scale-105 scale-95 duration-[333ms] hover:duration-[333ms]"
+    w="100%"
+  >
     <LinkBox
       as={NextLink}
       href={`/${category}/${id}`}
@@ -46,9 +49,9 @@ export const Post = ({
         <p className="font-semibold mb-3 ml-1"> {title}</p>
         <p className="ml-1">{children}</p>
       </div> */}
-      <button className="bodypost">
+      <button className="bodypost ">
         <h1 className="font-bold">{title}</h1>
-        <p className="-ml-9 -mr-9 mt-3">{children}</p>
+        <p className="-ml-9 -mr-9 mt-3 font-light">{children}</p>
         <div className="icon-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"

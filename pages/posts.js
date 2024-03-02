@@ -11,19 +11,26 @@ const Works = () => (
         posts.
       </Heading>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section>
-          <Post
-            group="Sosial Budaya"
-            id="harmoni-bhinneka"
-            title="Dekonstruksi Harmoni"
-            thumbnail={thumbInkdrop}
-          >
-            Menafsir ulang Bhinneka Tunggal Ika dalam Pluralitas Sosial,
-            Ekonomi, dan Gender Era Kontemporer
-          </Post>
-        </Section>
-      </SimpleGrid>
+      <Section>
+        <Post
+          group="Sosial Budaya"
+          id="harmoni-bhinneka"
+          title="Dekonstruksi Harmoni"
+          thumbnail={thumbInkdrop}
+        >
+          Menafsir ulang Bhinneka Tunggal Ika dalam Pluralitas Sosial, Ekonomi,
+          dan Gender Era Kontemporer
+        </Post>
+        <Post
+          group="Sosial Budaya"
+          id="harmoni-bhinneka"
+          title="Dekonstruksi Harmoni"
+          thumbnail={thumbInkdrop}
+        >
+          Menafsir ulang Bhinneka Tunggal Ika dalam Pluralitas Sosial, Ekonomi,
+          dan Gender Era Kontemporer
+        </Post>
+      </Section>
     </Container>
   </Layout>
 )
